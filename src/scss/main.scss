@@ -1,0 +1,92 @@
+.main-container {
+     max-width: 1492px;
+     margin: 0 auto;
+     padding-right: 15px;
+     padding-left: 15px;
+}
+.content {
+     display: flex;
+     justify-content: space-between;
+     align-items: center;
+     margin-bottom: 200px;
+     &:nth-child(even) {
+          flex-direction: row-reverse;
+     }
+     &-text {
+          padding-left: 150px;
+          max-width: 782px;
+          position: relative;
+          &:before {
+               position: absolute;
+               left: 0;
+               right: 0;
+               top: 0;
+               transform: translateY(-50%);
+               content: attr(data-number);
+               display: block;
+               width: 240px;
+               height: 240px;
+               font-style: normal;
+               font-weight: 700;
+               font-size: 240px;
+               line-height: 240px;
+               color: #FFFFFF;
+               opacity: 0.1;
+          }
+     }
+     &-subtitle {
+          font-weight: 800;
+          font-size: 18px;
+          line-height: 1.222;
+          letter-spacing: 6px;
+          color: #FBD784;
+          padding-left: 94px;
+          text-transform: uppercase;
+          position: relative;
+          &::before {
+               position: absolute;
+               left: 0;
+               top: 50%;
+               transform: translateY(-50%);
+               display: block;
+               content: "";
+               width: 72px;
+               height: 2px;
+               background-color: #FBD784;
+          }
+     }
+     &-title{
+          font-family: 'Playfair Display', serif;
+          max-width: 555px;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 64px;
+          line-height: 77px;
+          color: #FFFFFF;
+          margin-top: 30px;
+     }
+     &-readmore {
+          font-size: 18px;
+          font-weight: 700;
+          line-height: 22px;
+          text-decoration: none;
+          display: inline-block;
+          color: #FBD784;
+          transition: transform 0.7s ease;
+          & img {
+               margin-top: 5px;
+               margin-left: 10px;
+          }
+          &:hover {
+               transform: translateX(50px);
+          }
+     }
+     & p {
+          font-style: normal;
+          font-weight: 700;
+          font-size: 18px;
+          line-height: 32px;
+          color: #FFFFFF;
+          margin-top: 40px;
+     }
+}
